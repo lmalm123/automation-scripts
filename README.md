@@ -1,1 +1,2 @@
-#automation scritps that i used ai to help me create
+#automation 
+scritps that i used ai to help me create
