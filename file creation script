@@ -1,0 +1,41 @@
+this is an automations script that im using to create files
+
+
+#!/bin/bash
+
+echo "File/Directory Creator"
+echo "====================="
+
+# Ask what to create
+echo "What would you like to create?"
+echo "1) File"
+echo "2) Directory"
+echo -n "Enter choice (1 or 2): "
+read choice
+
+case $choice in
+    1)
+        echo -n "Enter filename: "
+        read filename
+        if [ -z "$filename" ]; then
+            echo "Error: No filename provided"
+            exit 1
+        fi
+        touch "$filename"
+        echo "File '$filename' created successfully"
+        ;;
+    2)
+        echo -n "Enter directory name: "
+        read dirname
+        if [ -z "$dirname" ]; then
+            echo "Error: No directory name provided"
+            exit 1
+        fi
+        mkdir "$dirname"
+        echo "Directory '$dirname' created successfully"
+        ;;
+    *)
+        echo "Invalid choice. Please enter 1 or 2"
+        exit 1
+        ;;
+esac
