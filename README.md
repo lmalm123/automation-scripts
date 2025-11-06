@@ -1,6 +1,3 @@
 #automation 
-
-
-
-
-scritps that i used ai to help me create
+This is a script that helps creates new files via the command line. 
+made using ai
